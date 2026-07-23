@@ -98,4 +98,14 @@ package cpu_types_pkg is
     IMM_NONE
   );
 
+  type mem_control_t is record
+    mem_read     : std_logic;
+    mem_write    : std_logic;
+    mem_size     : mem_size_t;
+    mem_unsigned : std_logic;
+    wb_selection : wb_sel_t;
+    jump_req     : std_logic;
+    exception    : exception_cause_t;
+  end record;
+
 end package;
